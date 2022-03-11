@@ -1,99 +1,35 @@
 #include <stdio.h>
 
-/* more headers goes there */
-
-/* betty style doc for function main goes there */
-
 /**
-
-* main - Entry point
-
-*
-
-* Return: Always 0 (Success)
-
-*/
+ * main - main - two pairs of numbers that do not repeat
+ *
+ * Return (0)
+ */
 
 int main(void)
-
 {
+int i, j;
 
-int p = 48, q = 48, y = 48, x = 49;
-
-
-
-while (p < 58)
-
+for (j = 0; j <= 99; j++)
 {
-
-while (q < 58)
-
+for (i = j; i <= 99; i++)
 {
-
-while (y < 58)
-
+if (i != j)
 {
-
-while (x < 58)
-
-{
-
-putchar(p);
-
-putchar(q);
-
+putchar(j / 10 + 48);
+putchar(j % 10 + 48);
 putchar(' ');
-
-putchar(y);
-
-putchar(x);
-
-if (!(p == 57 &&
-
-q == 56 &&
-
-y == 57 &&
-
-x == 57))
-
+putchar(i / 10 + 48);
+putchar(i % 10 + 48);
+}
+if (j * 100 + i != 9899)
 {
-
 putchar(',');
-
 putchar(' ');
-
 }
-
-x++;
-
 }
-
-y++;
-
-x = 48;
-
 }
-
-q++;
-
-q = p;
-
-x = q + 1;
-
-}
-
-p++;
-
-q = 48;
-
-y = p;
-
-x = q+ 1;
-
-}
-
 putchar('\n');
 
 return (0);
-
 }
