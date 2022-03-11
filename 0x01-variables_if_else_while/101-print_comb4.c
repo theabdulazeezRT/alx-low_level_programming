@@ -7,20 +7,25 @@
 */
 int main(void)
 {
-int tens;
-int ones;
+int h;
+int t;
+int o;
 
-for (tens = 0; tens <= 9; tens++)
+for (h = 0; h <= 9; h++)
 {
-for (ones = tens + 1; ones <= 9; ones++)
+for (t = h + 1; t <= 9; t++)
 {
-putchar(tens + '0');
-putchar(ones + '0');
+for (o = t + 1; o <= 9; o++)
+{
+putchar(h + '0');
+putchar(t + '0');
+putchar(o + '0');
 
-if (tens < 8)
+if (h < 7)
 {
 putchar(',');
 putchar(' ');
+}
 }
 }
 }
